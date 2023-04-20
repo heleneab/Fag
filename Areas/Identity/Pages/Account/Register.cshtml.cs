@@ -1,5 +1,5 @@
 // Licensed to the .NET Foundation under one or more agreements.
-// The .NET Foundation licenses this file to you under the MIT license.
+// The .NET Foundation licenses this file to you under the MIT license..
 #nullable disable
 
 using System;
@@ -17,6 +17,7 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.Extensions.Logging;
 using test_4.Models;
 
@@ -137,7 +138,10 @@ namespace test_4.Areas.Identity.Pages.Account
 
                 if (result.Succeeded)
                 {
+                    _userManager.AddToRoleAsync(user, user.UserRoles).Wait();
                     _logger.LogInformation("User created a new account with password.");
+                    
+                    
 
                     var userId = await _userManager.GetUserIdAsync(user);
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);

@@ -28,11 +28,12 @@
             @* is tutor? *@
             @Html.EditorFor(x => x.Input.UserRoles)
             <div class="">
-                <input asp-for="Input.UserRoles" type="checkbox" value="Admin" name="isTutor" aria-required="true" id="shownCheck"/>
+                <input asp-for="Input.UserRoles" type="checkbox" value="Admin" name="isTutor
+" aria-required="true" id="shownCheck"/>
                 <label asp-for="Input.UserRoles"></label>
                 <span asp-validation-for="Input.UserRoles" class="text-danger"></span>
             </div>
-            @* <input id="hiddenCheck" name="isTutor" type="hidden" value="false" /> *@
+            <input asp-for="Input.UserRoles" id="hiddenCheck" name="isTutor" type="hidden" value="Student" />
             
 
             

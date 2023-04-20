@@ -33,7 +33,6 @@ namespace test_4.Data
             // gi bruker rolle admin
             um.AddToRoleAsync(admin, "Admin").Wait();
 
-
             db.SaveChanges();
             
             //hvis comments enabled:
