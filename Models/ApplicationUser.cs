@@ -6,7 +6,8 @@ namespace test_4.Models;
 public class ApplicationUser : IdentityUser
 {
     [Required]
-    public string? Nickname { get; set; } = String.Empty;
+    public string? Name { get; set; } = String.Empty;
     
-    public int Age { get; set; }
+    public string? UserRoles { get; set; } = String.Empty;
+    
 }

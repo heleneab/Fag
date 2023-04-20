@@ -82,8 +82,13 @@ namespace test_4.Areas.Identity.Pages.Account
             
             //nickname
             [Required]
-            [Display(Name = "Nickname")]
-            public string Nickname { get; set; }
+            [Display(Name = "Name")]
+            public string Name { get; set; }
+            
+            //tutor?
+            //[Required]
+            [Display(Name = "UserRoles")]
+            public string UserRoles { get; set; } = String.Empty;
             
             /// <summary>
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
@@ -125,7 +130,8 @@ namespace test_4.Areas.Identity.Pages.Account
 
                 // setter nickname = input. Adds first fieald to new applicationUser
                 // 56.30 i forelesninga
-                user.Nickname = Input.Nickname;
+                user.Name = Input.Name;
+                user.UserRoles = Input.UserRoles;                
                 
                 var result = await _userManager.CreateAsync(user, Input.Password);
 

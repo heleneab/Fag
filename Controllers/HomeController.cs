@@ -22,7 +22,7 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        var user = _um.GetUserAsync(User).Result;
+        var user = _um.GetUserAsync(User).Result ?? throw new ArgumentNullException("_um.GetUserAsync(User).Result");
         
         return View();
     }

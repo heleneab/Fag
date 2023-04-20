@@ -20,10 +20,23 @@
             
             @* nickname *@
             <div class="form-floating">
-                <input asp-for="Input.Nickname" class="form-control" autocomplete="" aria-required="true" />
-                <label asp-for="Input.Nickname"></label>
-                <span asp-validation-for="Input.Nickname" class="text-danger"></span>
-            </div>            
+                <input asp-for="Input.Name" class="form-control" autocomplete="" aria-required="true" />
+                <label asp-for="Input.Name"></label>
+                <span asp-validation-for="Input.Name" class="text-danger"></span>
+            </div>    
+            
+            @* is tutor? *@
+            @Html.EditorFor(x => x.Input.UserRoles)
+            <div class="">
+                <input asp-for="Input.UserRoles" type="checkbox" value="Admin" name="isTutor" aria-required="true" id="shownCheck"/>
+                <label asp-for="Input.UserRoles"></label>
+                <span asp-validation-for="Input.UserRoles" class="text-danger"></span>
+            </div>
+            @* <input id="hiddenCheck" name="isTutor" type="hidden" value="false" /> *@
+            
+
+            
+            
             <div class="form-floating">
                 <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" />
                 <label asp-for="Input.Password"></label>
