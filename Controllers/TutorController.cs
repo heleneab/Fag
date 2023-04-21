@@ -9,11 +9,11 @@ namespace test_4.Controllers;
 public class TutorController : Controller
 {
    
-    private readonly RoleManager<IdentityRole> roleManager;
+    private readonly RoleManager<IdentityRole> _rm;
 
-    public TutorController(RoleManager<IdentityRole> roleManager)
+    public TutorController(RoleManager<IdentityRole> rm)
     {
-        this.roleManager = roleManager;
+        this._rm = rm;
     }    
     public IActionResult Index()
     {
@@ -27,10 +27,10 @@ public class TutorController : Controller
     [HttpPost]
     public async Task<IActionResult> Index(ProjectRole role)
     {
-        var roleExist = await roleManager.RoleExistsAsync(role.RoleName);
+        var roleExist = await _rm.RoleExistsAsync(role.RoleName);
         if (!roleExist)
         {
-            var result = await roleManager.CreateAsync(new IdentityRole(role.RoleName));
+            var result = await _rm.CreateAsync(new IdentityRole(role.RoleName));
         }
         return View();
     }

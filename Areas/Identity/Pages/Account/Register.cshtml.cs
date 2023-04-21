@@ -87,7 +87,7 @@ namespace test_4.Areas.Identity.Pages.Account
             public string Name { get; set; }
             
             //tutor?
-            //[Required]
+            [Required]
             [Display(Name = "UserRoles")]
             public string UserRoles { get; set; } = String.Empty;
             
