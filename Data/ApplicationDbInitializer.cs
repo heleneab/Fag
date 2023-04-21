@@ -16,8 +16,11 @@ namespace test_4.Data
 
 
             // Lag roller
-            var adminRole = new IdentityRole("Admin");
-            rm.CreateAsync(adminRole).Wait(); //venter til den er ferdig med å opprette rollen før den kjører
+            var tutorRole = new IdentityRole("Tutor");
+            rm.CreateAsync(tutorRole).Wait(); //venter til den er ferdig med å opprette rollen før den kjører
+
+            var studentRole = new IdentityRole("Student");
+            rm.CreateAsync(studentRole).Wait(); //venter til den er ferdig med å opprette rollen før den kjører
 
             // Add standard users
             var admin = new ApplicationUser
@@ -31,7 +34,7 @@ namespace test_4.Data
             um.CreateAsync(user, "Password1.").Wait();
             
             // gi bruker rolle admin
-            um.AddToRoleAsync(admin, "Admin").Wait();
+            um.AddToRoleAsync(admin, "Tutor").Wait();
 
             db.SaveChanges();
             
