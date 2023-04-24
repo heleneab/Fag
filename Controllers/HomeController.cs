@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using Example.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using test_4.Data;
@@ -23,12 +24,17 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+        var user = _um.GetUserAsync(User).Result;
+        
+
         //var user = _um.GetUserAsync(User).Result ?? throw new ArgumentNullException("_um.GetUserAsync(User).Result");
         
         return View();
     }
+    
+    
 
-    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Tutor")]
     public IActionResult Privacy()
     {
         return View();

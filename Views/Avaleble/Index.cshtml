@@ -1,0 +1,23 @@
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+@using Microsoft.EntityFrameworkCore.Metadata.Internal
+@using Microsoft.AspNetCore.Identity
+@model IEnumerable<Example.Models.Avaleble>
+
+@{
+  ViewBag.Title = "title";
+  Layout = "_Layout";
+}
+
+<h2>Tutors har ledig tid</h2>
+
+<ul>
+  
+
+  @foreach (var avaleble in Model)
+  {
+    <li>@avaleble.Date @avaleble.Username</li>
+  }
+
+</ul>
+
+<p><a asp-controller="Avaleble" asp-action="Add">Tidspunkt du er ledig på</a></p>

@@ -9,5 +9,4 @@ public class ApplicationUser : IdentityUser
     public string? Name { get; set; } = String.Empty;
     
     public string? UserRoles { get; set; } = String.Empty;
-    
 }

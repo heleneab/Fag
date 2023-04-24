@@ -1,4 +1,5 @@
 ﻿using System.Security.Cryptography.X509Certificates;
+using Example.Models;
 using Microsoft.AspNetCore.Identity;
 using test_4.Models;
 
@@ -33,9 +34,22 @@ namespace test_4.Data
             um.CreateAsync(admin, "Password1.").Wait();
             um.CreateAsync(user, "Password1.").Wait();
             
+
+            
+            // hardkode
+            var Avaleble = new[]
+            {
+                new Avaleble(new DateTime(1981, 1, 1), user)
+            };
+            //var Avaleble1 = um.CreateAsync(DateTime Data, user);
+
+            //var userId =  um.GetUserIdAsync(user);
+            db.Avalebles.AddRange(Avaleble);
             // gi bruker rolle admin
             um.AddToRoleAsync(admin, "Tutor").Wait();
-
+                
+            //ny
+            
             db.SaveChanges();
             
             //hvis comments enabled:
