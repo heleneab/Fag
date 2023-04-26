@@ -43,7 +43,7 @@ public class AvalebleController : Controller
             return View(avaleble);
 
         var userName = User.Identity.Name;
-        avaleble.Username = userName;
+        avaleble.User = userName;
         
 
         _db.Avalebles.Add(avaleble);

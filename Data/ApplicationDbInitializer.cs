@@ -37,14 +37,14 @@ namespace test_4.Data
 
             
             // hardkode
-            var Avaleble = new[]
+           /* var Avaleble = new[]
             {
                 new Avaleble(new DateTime(1981, 1, 1), user)
-            };
+            };*/
             //var Avaleble1 = um.CreateAsync(DateTime Data, user);
 
             //var userId =  um.GetUserIdAsync(user);
-            db.Avalebles.AddRange(Avaleble);
+           // db.Avalebles.AddRange(Avaleble);
             // gi bruker rolle admin
             um.AddToRoleAsync(admin, "Tutor").Wait();
                 

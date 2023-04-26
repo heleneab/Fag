@@ -1,0 +1,21 @@
+﻿@model System.Collections.Generic.List<test_4.Models.UserSubject>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>title</h2>
+<h2>Tutors har ledig tid</h2>
+
+<ul>
+  
+
+    @foreach (var avaleble in Model)
+    {
+        <li>@avaleble.Name @avaleble.UserName</li>
+    }
+
+</ul>
+
+<p><a asp-controller="Subject" asp-action="Add">Tidspunkt du er ledig på</a></p>

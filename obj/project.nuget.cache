@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tUXFtFUvduiaUGcaXkcsYvKJdcn+8sP0nxxdKo32/nGhiMiZ+pCfvz69m8fbX9jWzIHhT/AAOmACWgTOyNyDpQ==",
+  "dgSpecHash": "pjj8PEx9AGRYL3C5kOSVbgMqMjk1LevQphBXSF9M2umbdE3xbUfwfsVCiojJi4DtVvnqtLhooDUh5Wa6hYCVjw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Helen\\RiderProjects\\Avaleble_2\\test_4.csproj",
+  "projectFilePath": "C:\\Users\\Helen\\RiderProjects\\Avaleble_4\\test_4.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Helen\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Helen\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

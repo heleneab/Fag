@@ -1,0 +1,23 @@
+﻿@model test_4.Models.UserSubject
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>title</h2>
+<h2>Add date</h2>
+
+<form method="post">
+  
+    <div class="row mb-3">
+        <label asp-for="Name" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-3">
+            <input asp-for="Name" class="form-control">
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+    </div>
+    <input type="hidden" asp-for="UserName" value="@User.Identity.Name" />
+  
+    <input type="submit" class="btn btn-primary" value="Add date">
+</form>

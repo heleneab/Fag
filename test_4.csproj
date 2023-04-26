@@ -26,4 +26,13 @@
     <PackageReference Include="Npgsql" Version="6.0.7" />
   </ItemGroup>
 
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Views\Subject\ConfirmationPage.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Subject\Index.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Pages" />
+  </ItemGroup>
+
 </Project>

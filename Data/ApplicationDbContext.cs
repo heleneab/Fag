@@ -13,4 +13,6 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     }
     public DbSet<Avaleble> Avalebles=> Set<Avaleble>();
 
+    public DbSet<UserSubject> UserSubjects => Set<UserSubject>();
+
 }

@@ -10750,11 +10750,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Helen\\RiderProjects\\Avaleble_2\\test_4.csproj",
+      "projectUniqueName": "C:\\Users\\Helen\\RiderProjects\\Avaleble_4\\test_4.csproj",
       "projectName": "test_4",
-      "projectPath": "C:\\Users\\Helen\\RiderProjects\\Avaleble_2\\test_4.csproj",
+      "projectPath": "C:\\Users\\Helen\\RiderProjects\\Avaleble_4\\test_4.csproj",
       "packagesPath": "C:\\Users\\Helen\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Helen\\RiderProjects\\Avaleble_2\\obj\\",
+      "outputPath": "C:\\Users\\Helen\\RiderProjects\\Avaleble_4\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Helen\\AppData\\Roaming\\NuGet\\NuGet.Config",

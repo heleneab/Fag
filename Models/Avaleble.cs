@@ -15,7 +15,7 @@ namespace Example.Models
     {
         public Avaleble() {}
         
-        public Avaleble(DateTime date, ApplicationUser user)
+        public Avaleble(DateTime date, string user)
         {
             Date = date;
             User = user;
@@ -30,10 +30,7 @@ namespace Example.Models
         
         // Foreign to the relevant ApplicationUser
     
-        public string Username { get; set; }
-        
-        // Application property to the user who made this Avaleble
-        [ForeignKey(nameof(Username))]
-        public ApplicationUser User { get; set; }
+     
+        public string User { get; set; }
     }
 }

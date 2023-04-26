@@ -17,7 +17,7 @@
       <span asp-validation-for="Date" class="text-danger"></span>
     </div>
   </div>
- <input asp-for="Username" value="@User.Identity.Name" />
+ <input type="hidden" asp-for="User" value="@User.Identity.Name" />
   
   <input type="submit" class="btn btn-primary" value="Add date">
   </form>
